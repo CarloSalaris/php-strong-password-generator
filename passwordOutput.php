@@ -19,9 +19,12 @@ session_start();
             background-color: #cff4fc;
             color: #3795bf;
         }
-        a{
+        a {
+            display: inline-block;
             color: inherit;
             text-decoration: inherit;
+            width: 100%;
+            height: 100%;
         }
 
     </style>
@@ -35,7 +38,7 @@ session_start();
             La nuova password generata ha <?php echo $_SESSION['pwdLength']; ?> caratteri ed è: 
             <div class="col bg-white p-3 m-3 text-black"><?php echo $_SESSION['password']; ?></div>
         </h4>
-        <button type="submit" class="col-2 btn btn-primary"><a href="./index.php">Ritorna</a></button>
+        <button type="submit" class="col-2 px-0 py-1 btn btn-primary"><a href="./index.php">Ritorna</a></button>
     </div>
     
 </body>
