@@ -1,3 +1,8 @@
+<?php
+    // Start the session
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +13,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>Strong Password Generator</title>
 
-    <?php include "functions.php"; ?>
+    <?php
+        include "functions.php";
+        // Set session variables
+        $_SESSION['pwdLength'] = $pwdLength;
+        $_SESSION['password'] = $password;
+
+        if (isset($_GET['inputLength'])) {
+            header('location: passwordOutput.php');
+        }
+    ?>
 
     <style>
         body{
@@ -36,8 +50,7 @@
     <!-- RISULTATO -->
     <div class="OutputPasswordDiv p-3 mb-3 rounded" >
         <h4>
-            La nuova password generata ha <?php echo $pwdLength ?> caratteri ed è: 
-            <span class="text-black"><?php echo $password ?></span>
+            Inserisci i valori necessari per generare la tua nuova password 
         </h4>
     </div>
 
