@@ -55,10 +55,10 @@
     </div>
 
     <!-- FORM -->
-    <div class="p-3 rounded bg-white">
+    <div class="container p-3 rounded bg-white">
         <form method="get">
             <!-- ROW Lunghezza password -->
-            <div class="row mb-3 space-between">
+            <div class="row mb-3">
                 <label class="col-sm-7 col-form-label" for="pwdLength">Lunghezza Password (min 6 caratteri): </label>
                 <div class="col-sm-4">
                     <input type="number" class="form-control" name="inputLength" id="inputLength" value="6" min="6">
@@ -67,7 +67,7 @@
             </div>
 
             <!-- ROW Ripetizione caratteri -->
-            <div class="row mb-3 space-between">
+            <div class="row mb-3">
                 <label class="col-sm-7 col-form-label" for="chRepeat">Consenti ripetizioni di uno o più caratteri: </label>
                 <div class="col-sm-4">
                     <div class="form-check">
@@ -83,7 +83,35 @@
                         </label>
                     </div>
                 </div>
-                
+            </div>
+
+            <!-- ROW filter characters -->
+            <div class="row mb-3 justify-content-end">
+
+                <div class="col col-sm-5">
+                    <!-- checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Lettere
+                        </label>
+                    </div>
+                    <!-- checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Numeri
+                        </label>
+                    </div>
+                    <!-- checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Simboli
+                        </label>
+                    </div>
+                </div>
+
             </div>
 
             <!-- BUTTONS -->
