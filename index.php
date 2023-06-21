@@ -11,20 +11,32 @@
     <?php
 
         $pwdLength = $_GET['inputLength'];
-        var_dump($pwdLength);
+
+        // GENERATE RANDOM PASSWORD
+        // array_flip to switch key:value in the array (because array_rand returns the keys)
+        $numbers = range('0', '9');
+        $lowercase = array_flip(range('a', 'z'));
+        $uppercase = array_flip(range('A', 'Z')); 
+        $symbols = array_flip(str_split('"!@#$%^&*()_+=-{}[]\/|;:<>?/' . "'"));
+        $combined = array_merge($numbers, $lowercase, $uppercase, $symbols);
+        //implode to return a string
+        $password = implode(array_rand($combined, $pwdLength));
 
     ?>
 </head>
 
 <body>
-<div class="container">
+<div class="container my-5">
     <!-- TITOLO -->
     <h1 class="text-center">Strong Password Generator</h1>
     <h2 class="text-center">Genera una password sicura</h2>
     
     <!-- RISULTATO -->
     <div>
-        (Risultato password)
+        <h4>
+            La nuova password generata ha <?php echo $pwdLength ?> caratteri ed è: 
+            <?php echo $password ?>
+        </h4>
     </div>
 
     <!-- FORM -->
@@ -33,7 +45,7 @@
         <div class="row mb-3 space-between">
             <label for="inputEmail3" class="col-sm-7 col-form-label"for="pwdLength">Lunghezza Password (min 6 caratteri): </label>
             <div class="col-sm-4">
-                <input type="number" class="form-control" name="inputLength" id="inputLength" min="6">
+                <input type="number" class="form-control" name="inputLength" id="inputLength" value="6" min="6">
             </div>
             <!-- BUTTONS -->
             <div>
