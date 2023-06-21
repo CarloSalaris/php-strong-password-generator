@@ -9,38 +9,57 @@
     <title>Strong Password Generator</title>
 
     <?php include "functions.php"; ?>
-    
+
+    <style>
+        body{
+            background-color: #001632;
+        }
+
+        h1 {
+            color: #7f8994;
+        }
+
+        .OutputPasswordDiv {
+            background-color: #cff4fc;
+            color: #3795bf;
+        }
+
+    </style>
 </head>
 
 <body>
 <div class="container my-5">
     <!-- TITOLO -->
     <h1 class="text-center">Strong Password Generator</h1>
-    <h2 class="text-center">Genera una password sicura</h2>
+    <h2 class="text-center text-white">Genera una password sicura</h2>
     
     <!-- RISULTATO -->
-    <div>
+    <div class="OutputPasswordDiv p-3 mb-3 rounded" >
         <h4>
             La nuova password generata ha <?php echo $pwdLength ?> caratteri ed è: 
-            <?php echo $password ?>
+            <span class="text-black"><?php echo $password ?></span>
         </h4>
     </div>
 
     <!-- FORM -->
-    <form method="get" >
-        <!-- ROW Lunghezza password -->
-        <div class="row mb-3 space-between">
-            <label for="inputEmail3" class="col-sm-7 col-form-label"for="pwdLength">Lunghezza Password (min 6 caratteri): </label>
-            <div class="col-sm-4">
-                <input type="number" class="form-control" name="inputLength" id="inputLength" value="6" min="6">
+    <div class="p-3 rounded bg-white">
+        <form method="get">
+            <!-- ROW Lunghezza password -->
+            <div class="row mb-3 space-between">
+                <label for="inputEmail3" class="col-sm-7 col-form-label"for="pwdLength">Lunghezza Password (min 6 caratteri): </label>
+                <div class="col-sm-4">
+                    <input type="number" class="form-control" name="inputLength" id="inputLength" value="6" min="6">
+                </div>
+                
             </div>
+
             <!-- BUTTONS -->
             <div>
                 <button type="submit" class="btn btn-primary">Invia</button>
                 <button type="reset" class="btn btn-secondary">Annulla</button>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 </body>
 </html>
