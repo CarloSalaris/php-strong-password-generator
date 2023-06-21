@@ -1,5 +1,8 @@
 <?php
     $pwdLength = $_GET['inputLength'];
+    if (!$pwdLength) {
+        $pwdLength = 6;
+    }
 
     // GENERATE RANDOM PASSWORD
     // array_flip to switch key:value in the array (because array_rand returns the keys)
