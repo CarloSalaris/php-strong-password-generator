@@ -59,9 +59,29 @@
         <form method="get">
             <!-- ROW Lunghezza password -->
             <div class="row mb-3 space-between">
-                <label for="inputEmail3" class="col-sm-7 col-form-label"for="pwdLength">Lunghezza Password (min 6 caratteri): </label>
+                <label class="col-sm-7 col-form-label" for="pwdLength">Lunghezza Password (min 6 caratteri): </label>
                 <div class="col-sm-4">
                     <input type="number" class="form-control" name="inputLength" id="inputLength" value="6" min="6">
+                </div>
+                
+            </div>
+
+            <!-- ROW Ripetizione caratteri -->
+            <div class="row mb-3 space-between">
+                <label class="col-sm-7 col-form-label" for="chRepeat">Consenti ripetizioni di uno o più caratteri: </label>
+                <div class="col-sm-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioYes" checked>
+                        <label class="form-check-label" for="radioYes">
+                            Sì
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="radioNo">
+                        <label class="form-check-label" for="radioNo">
+                            No
+                        </label>
+                    </div>
                 </div>
                 
             </div>
