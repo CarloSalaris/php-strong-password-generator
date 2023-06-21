@@ -24,16 +24,16 @@
     
     <!-- RISULTATO -->
     <div>
-        Risultato
+        (Risultato password)
     </div>
 
     <!-- FORM -->
     <form method="get" >
         <!-- ROW Lunghezza password -->
         <div class="row mb-3 space-between">
-            <label for="inputEmail3" class="col-sm-7 col-form-label"for="pwdLength">Lunghezza Password: </label>
+            <label for="inputEmail3" class="col-sm-7 col-form-label"for="pwdLength">Lunghezza Password (min 6 caratteri): </label>
             <div class="col-sm-4">
-                <input type="number" class="form-control" name="inputLength" id="inputLength">
+                <input type="number" class="form-control" name="inputLength" id="inputLength" min="6">
             </div>
             <!-- BUTTONS -->
             <div>
