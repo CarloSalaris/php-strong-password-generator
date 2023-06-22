@@ -17,7 +17,7 @@
         include "functions.php";
         // Set session variables
         $_SESSION['pwdLength'] = $pwdLength;
-        $_SESSION['password'] = $password;
+        $_SESSION['password'] = $res;
 
         if (isset($_GET['inputLength'])) {
             header('location: passwordOutput.php');
